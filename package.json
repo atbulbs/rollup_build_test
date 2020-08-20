@@ -1,0 +1,60 @@
+{
+  "name": "sdk",
+  "version": "0.0.1",
+  "description": "sdk.js",
+  "main": "dist/sdk.umd.js",
+  "module": "dist/sdk.es.js",
+  "types": "dist/types/sdk.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run rollup",
+    "clean": "rimraf dist",
+    "rollup": "rollup -c rollup.config.js"
+  },
+  "keywords": [
+    "TypeScript",
+    "TS",
+    "rollup"
+  ],
+  "author": "JasonLiao <atbulbs@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.6.3",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^10.14.9",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "rimraf": "^2.6.2",
+    "rollup": "^1.27.2",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-terser": "^7.0.0",
+    "rollup-plugin-typescript2": "^0.25.2",
+    "rollup-plugin-uglify": "^6.0.4",
+    "ts-node": "^8.2.0",
+    "tslint": "^5.19.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.5.3",
+    "uglify-es": "^3.3.9"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
