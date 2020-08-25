@@ -3,8 +3,10 @@ import sourceMaps from 'rollup-plugin-sourcemaps'
 import JsonPlugin from 'rollup-plugin-json'
 // import { uglify } from 'rollup-plugin-uglify'
 // import { minify } from 'uglify-es'
-import { terser } from 'rollup-plugin-terser'
+// import { terser } from 'rollup-plugin-terser'
 const json = require('./package.json')
+import commonjs from 'rollup-plugin-commonjs'
+import visualizer from 'rollup-plugin-visualizer'
 
 export default {
   input: './src/main.ts',
@@ -24,6 +26,8 @@ export default {
     },
   ],
   plugins: [
+    visualizer(),
+    commonjs(),
     JsonPlugin(),
     typescript({
       useTsconfigDeclarationDir: true,
@@ -31,14 +35,14 @@ export default {
       abortOnError: true,
     }),
     sourceMaps(),
-    terser({
-      output: {
-        comments: false,
-        ascii_only: true // 仅输出ascii字符
-      },
-      compress: {
-        pure_funcs: ['console.log'] // 去掉console.log函数
-      }
-    })
+    // terser({
+    //   output: {
+    //     comments: false,
+    //     ascii_only: true // 仅输出ascii字符
+    //   },
+    //   compress: {
+    //     pure_funcs: ['console.log'] // 去掉console.log函数
+    //   }
+    // })
   ],
 }
